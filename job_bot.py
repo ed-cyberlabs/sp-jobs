@@ -1,8 +1,8 @@
 import os
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ConversationHandler
 
-TOKEN = os.environ['8394541384:AAFCYsw-o9WQ0zLerkcOJA1F3GLa-wtE0CQ']
-GROUP_CHAT_ID = int(os.environ['399547346'])
+TOKEN = os.environ['TOKEN']
+GROUP_CHAT_ID = int(os.environ['GROUP_CHAT_ID'])
 
 NAME, EMAIL, ADDRESS, DESC, FEE, PHONE, DATE, TIME_VAL, TEAM = range(9)
 
