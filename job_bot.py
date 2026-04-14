@@ -65,7 +65,12 @@ async def get_team(update, context):
         'Status: To be Booked\n'
         'Team: ' + update.message.text
     )
-    await context.bot.send_message(chat_id=GROUP_CHAT_ID, text=msg)
+    print("SENDING TO CHAT ID:", GROUP_CHAT_ID)
+    try:
+        await context.bot.send_message(chat_id=GROUP_CHAT_ID, text=msg)
+        print("SUCCESS")
+    except Exception as e:
+        print("FAILED:", e)
     await update.message.reply_text('Done! Job posted to the group.')
     return ConversationHandler.END
 
